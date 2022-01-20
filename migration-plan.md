@@ -58,7 +58,7 @@ module "ecs-module" {
 }
 ```
  
-```
+```terraform
 # Configure the AWS Provider
 
 terraform {
@@ -81,7 +81,7 @@ provider "aws" {
 
 data "aws_caller_identity" "current" {}
 ```
-```
+```terraform
 // Registry
 
 resource "aws_ecr_repository" "web" {
