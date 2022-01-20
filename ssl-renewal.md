@@ -44,4 +44,4 @@ sudo certbot certonly --manual --preferred-challenges dns
 ## 7. After you have create and saved this record, you can press enter for Certbot to resume.
 # *You now have a freshly generated certificate.*
 
-* openssl x509 -text -noout -in filename.crtS
+* ### openssl x509 -text -noout -in filename.crtS
