@@ -7,6 +7,7 @@
 ### 1. Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/
 ### 2. On the navigation bar, choose a Region for your load balancer. Be sure to select the same Region that you selected for your EC2 instances.
 ### 3. On the navigation pane, under LOAD BALANCING, choose Load Balancers.
+![image](https://user-images.githubusercontent.com/95855861/158735080-a35a98aa-3207-48df-8eed-fb945eaa844a.png)
 
 ### 4. Choose Create Load Balancer.
 ### 5. For Classic Load Balancer, choose Create.
