@@ -14,13 +14,14 @@
 
 ## Define your load balancer
 ### You must provide a basic configuration for your load balancer, such as a name, a network, and a listener.
-
-### A listener is a process that checks for connection requests. It is configured with a protocol and a port for front-end (client to load balancer) connections and a protocol and a port for back-end (load balancer to instance) connections. In this tutorial, you configure a listener that accepts HTTP requests on port 80 and sends them to your instances on port 80 using HTTP.
-
-### To define your load balancer and listener
+### To define your load balancer and listene
 ### 1. For Load Balancer name, type a name for your load balancer.
+![image](https://user-images.githubusercontent.com/95855861/158735380-6d838a7d-d3e0-476c-b1d0-a50d2eb2da44.png)
 
 ### The name of your Classic Load Balancer must be unique within your set of Classic Load Balancers for the region, can have a maximum of 32 characters, can contain only alphanumeric characters and hyphens, and must not begin or end with a hyphen.
+![image](https://user-images.githubusercontent.com/95855861/158735489-7b29cff5-c030-40a8-80b6-55f2e62aa4cb.png)
+
+
 ### 2. For Create LB inside, select the same network that you selected for your instances: EC2-Classic or a specific VPC.
 ### 3. [Default VPC] If you selected a default VPC and would like to choose the subnets for your load balancer, select Enable advanced VPC configuration.
 ### 4. Leave the default listener configuration.
@@ -28,6 +29,7 @@
 ### 5. [EC2-VPC] For Available subnets, select at least one available public subnet using its add icon. The subnet is moved under Selected subnets. To improve the availability of your load balancer, select more than one public subnet.
 ### You can add at most one subnet per Availability Zone. If you select a subnet from an Availability Zone where there is already an selected subnet, this subnet replaces the currently selected subnet for the Availability Zone.
 ### 6. Choose Next: Assign Security Groups.
+![image](https://user-images.githubusercontent.com/95855861/158735574-feb38f98-871f-4a54-9c3f-2146de92261f.png)
 
 ## Assign security groups to your load balancer in a VPC
 ### If you selected a VPC as your network, you must assign your load balancer a security group that allows inbound traffic to the ports that you specified for your load balancer and the health checks for your load balancer.
@@ -52,6 +54,8 @@
 # Migrate Domain and DNS to AWS Route 53
 ## Step 1: Create AWS Route 53 Hosted Zone
 ### First we must create the Hosted Zone in Route 53. This is so we can get our Amazon Name Servers for use in a later step. Go to Route 53 in the AWS console, then click Hosted Zones on the left column, then Create Hosted Zone:
+![image](https://user-images.githubusercontent.com/95855861/158735789-74b0d5d7-2f53-4b5a-8102-dad51d34206a.png)
+
 ### Enter your domain name that you wanted to transfer over, select Public Hosted Zone for type, add tags if applicable, then click Create Hosted Zone:
 ### Should see a green message stating successfully created
 ## Step 2: Export Zone File Information from GoDaddy and Import into Route 53:
