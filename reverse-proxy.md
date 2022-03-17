@@ -6,7 +6,6 @@
 
 ## Once you gave nginx installed you would have a directory structure like this under 
 >## cd /etc/nginx/
-![image](https://user-images.githubusercontent.com/95855861/158781861-3b958307-b733-44b8-9a6b-8d5141c93184.png)
 
 ## Here, conf.d is the directory where the configuration files are strored.
 ## The main configuration file is nginx.conf file and it is recommended to take a backup for it.
@@ -19,6 +18,24 @@
 >## cd /etc/nginx/sites-available/
 ## NOW WE WRITE OUR CONFIGURATION FILE.
 >## sudo vi example-app
+
+```
+server {
+    listen 80;
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+    }
+}  
+```
+## Now we also need to create symboic link, so that when we reload the nginx , this file will be taken into effect.
+
+>## sudo ln -s /etc/nginx/sites-avaialable/example-app /etc/nginx/sites-enabled/example-app
+## *This will create the symb link.
+
+## Now lets start Nginx
+
+> ## sudo /etc/init.d/nginx start
+
 
 
 
