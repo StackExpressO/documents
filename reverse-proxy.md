@@ -5,6 +5,8 @@
 >## sudo apt-get install nginx
 
 ## Once you have nginx installed you would have a directory structure like this under 
+![image](https://user-images.githubusercontent.com/95855861/159456435-9ee05ca6-e72a-403a-89e2-9c1d53a52e46.png)
+
 >## cd /etc/nginx/
 
 ## The main configuration file is nginx.conf file and it is recommended to take a backup for it.
@@ -24,7 +26,7 @@ server {
     }
 }  
 ```
-## Now we also need to create symbolic link, so that when we reload the nginx , this file will be taken into effect.
+## Now we a create symbolic link, so that when we reload the nginx , this file will be taken into effect.
 
 >## sudo ln -s /etc/nginx/sites-avaialable/example-app /etc/nginx/sites-enabled/example-app
 ## *This will create the symbolic link.
