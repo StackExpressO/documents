@@ -4,14 +4,11 @@
 ## Install nginx 
 >## sudo apt-get install nginx
 
-## Once you gave nginx installed you would have a directory structure like this under 
+## Once you have nginx installed you would have a directory structure like this under 
 >## cd /etc/nginx/
 
-## Here, conf.d is the directory where the configuration files are strored.
 ## The main configuration file is nginx.conf file and it is recommended to take a backup for it.
 
-## The 2 important directories are "sites-available" and "sites-enable"
-## An important thing to know about "sites-enable" is whatever configuration you will put into "sites-enabled", this configuration will apply when you do nginx start or nginx restart. The same will not happpen in the case of "sites-available"
 ---------------------------------------------
 ## we will be creating a file in sites-available directoy and then create a symbolic link for that in sites enabled directory.
 
@@ -23,19 +20,19 @@
 server {
     listen 80;
     location / {
-        proxy_pass http://127.0.0.1:3000;
+        proxy_pass http://localhost:3000;
     }
 }  
 ```
-## Now we also need to create symboic link, so that when we reload the nginx , this file will be taken into effect.
+## Now we also need to create symbolic link, so that when we reload the nginx , this file will be taken into effect.
 
 >## sudo ln -s /etc/nginx/sites-avaialable/example-app /etc/nginx/sites-enabled/example-app
-## *This will create the symb link.
+## *This will create the symbolic link.
 
 ## Now lets start Nginx
 
 > ## sudo /etc/init.d/nginx start
-
+> ## sudo systemctl start nginx
 
 
 
