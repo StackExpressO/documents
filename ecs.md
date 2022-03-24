@@ -2,11 +2,19 @@
 # 1. CREATE THE ECS CLUSTER
 
 ## 1. Open the Amazon ECS console at https://console.aws.amazon.com/ecs/.
+![image](https://user-images.githubusercontent.com/95855861/159849974-4f612fec-22e9-4176-8b54-61d0ad47182b.png)
+
 ## 2. From the navigation bar, select the Region to use.
 ## 3. In the navigation pane, choose Clusters.
+![image](https://user-images.githubusercontent.com/95855861/159850079-63d5b790-ac90-46cc-adc7-29f71daa0932.png)
+
 ## 4. On the Clusters page, choose Create Cluster.
 ## 5. For Select cluster compatibility, choose Networking only, then choose Next Step.
+![image](https://user-images.githubusercontent.com/95855861/159850174-0819ad92-c3d9-40bb-ac13-5c08b62765e4.png)
+
 ## 6. On the Configure cluster page, enter a Cluster name. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed.
+![image](https://user-images.githubusercontent.com/95855861/159850302-46fb2fcb-5e25-422c-b538-c95ca7619c78.png)
+
 ## 7. In the Networking section, configure the VPC for your cluster. You can keep the default settings, or you can modify these settings with the following steps.
 
 ## a)  If you choose to create a new VPC, for CIDR Block, select a CIDR block for your VPC. For more information, see Your VPC and Subnets in the Amazon VPC User Guide. (optional)
@@ -20,12 +28,17 @@ _________________________________________________________________
 ## 2. From the navigation bar, choose the Region to create your repository in.
 ## 3. In the navigation pane, choose Repositories.
 ## 4. On the Repositories page, choose Create repository.
+![image](https://user-images.githubusercontent.com/95855861/159850758-73cfa96d-f749-4e75-9b84-b002711823ce.png)
+
 ## 5. For Repository name, enter a unique name for your repository. The repository name can be specified on its own (for example nginx-web-app). Alternatively, it can be prepended with a namespace to group the repository into a category (for example project-a/nginx-web-app).
 ## 6. For Tag immutability, choose the tag mutability setting for the repository. Repositories configured with immutable tags prevent image tags from being overwritten. For more information, see Image tag mutability.
 ## 7. For Scan on push, choose the image scanning setting for the repository. Repositories that are configured to scan on push start an image scan whenever an image is pushed. If you want to start an image scan at a different time, you need to manually start the image scans. For more information, see Image scanning.
+![image](https://user-images.githubusercontent.com/95855861/159850838-bfaf703a-620d-4e40-9628-3b2684726829.png)
 
 ## 8. For KMS encryption, choose whether to enable encryption of the images in the repository using AWS Key Management Service. By default, when KMS encryption is enabled, Amazon ECR uses an AWS managed key (KMS key) with the alias aws/ecr. This key is created in your account the first time that you create a repository with KMS encryption enabled. For more information, see Encryption at rest.
 ## 9. When KMS encryption is enabled, select Customer encryption settings (advanced) to choose your own KMS key. The KMS key must be in the same Region as the cluster. Choose Create an AWS KMS key to navigate to the AWS KMS console to create your own key.
+![image](https://user-images.githubusercontent.com/95855861/159850943-50040d99-d619-4d39-8e79-330d3824065f.png)
+
 ## 10. Choose Create Repository
 ## Your Repository has been Created.
 # *Pushing an image to your Repository*
