@@ -54,22 +54,31 @@ _________________________________________________________________
 
 ## 1. Open the new console at https://console.aws.amazon.com/ecs/v2
 ## 2. In the navigation pane, choose Task definitions, Create new task definition.
+![image](https://user-images.githubusercontent.com/95855861/159851234-e7f23792-b66b-47ab-b2e2-a7f20c8d9d81.png)
+
 ## 3. For Task definition family, specify a unique name for the task definition.
+![image](https://user-images.githubusercontent.com/95855861/159851352-38204bbe-382f-4f4a-84e2-be1dddcac623.png)
+
 ## 4. For each container to define in your task definition, complete the following steps.
 ##   a) For Name, specify a name for the container.
 
 ##   b) For Image URI, specify the image to use to start a container. Images in the Docker Hub registry are may be specified using the Docker Hub registry name only. For example, if amazonlinux:latest is specified, the Amazon Linux container hosted on Docker Hub is used. For all other repositories, specify the repository using either the repository-url/image:tag or repository-url/image@digest formats.
 ##   c) For Essential container, if your task definition has two or more containers defined, you may specify whether the container should be considered essential. If a container is marked as essential, if that container stops then the task is stopped. Each task definition must contain at least one essential container.
 ## d) For Container port and Protocol, specify the port mapping to use for the container. A port mapping allows the container to access ports on the host to send or receive traffic. Choose Add more port mappings to specify additional container port mappings.
+![image](https://user-images.githubusercontent.com/95855861/159851948-1eaa433c-5e80-4889-92c2-277929172caa.png)
 
 ## e) Expand the Environment variables section to specify environment variables to inject into the container. You can specify environment variables either individually using key-value pairs or in bulk by specifying an environment variable file hosted in an Amazon S3 bucket. For information on how to format an environment variable file, see Specifying environment variables.
 ## f) Choose Add more containers to add additional containers to the task definition. Choose Next once all containers have been defined. (optional)
+![image](https://user-images.githubusercontent.com/95855861/159851517-b90024be-cd00-46ad-9fd8-a751216f8814.png)
+
 ## 5. For App environment, choose AWS Fargate (serverless), Amazon EC2 instances, or both. Amazon ECS performs validation using this value to ensure the task definition parameters are valid for the infrastructure type.
 ## 6. For Operating system/Architecture, choose the operating system and CPU architectire for the task.
 
 ## To run your task on a 64-bit ARM architecture, select Linux/ARM64. For more information, see Runtime platform.
 
 ## To run your AWS Fargate (serverless) tasks on Windows containers, choose a supported Windows operating system. For more information, see Windows containers on AWS Fargate considerations.
+![image](https://user-images.githubusercontent.com/95855861/159851592-e872fab6-34c2-430f-8c39-be0f32ebffa8.png)
+
 ## 7. For Task size, specify the CPU and memory values to reserve for the task. The CPU value is specified as vCPUs and memory is specified as GB.
 
 ## 8. Expand the Task roles, network mode section to specify an IAM role to assign to the task. A task IAM role provides permissions for the containers in a task to call AWS APIs. (optional)
@@ -89,15 +98,8 @@ _________________________________________________________________
 ## The following describes each container log destination in more detail.
 ### > Amazon CloudWatch — Configure the task to send container logs to CloudWatch Logs. The default log driver options are provided which creates a CloudWatch log group on your behalf. To specify a different log group name, change the driver option values.
 
-### > Amazon Kinesis Data Firehose — Configure the task to send container logs to Kinesis Data Firehose. The default log driver options are provided which sends logs to an Kinesis Data Firehose delivery stream. To specify a different delivery stream name, change the driver option values.
-### > Amazon Kinesis Data Streams — Configure the task to send container logs to Kinesis Data Streams. The default log driver options are provided which sends logs to an Kinesis Data Streams stream. To specify a different stream name, change the driver option values.
-### > Amazon OpenSearch Service — Configure the task to send container logs to an OpenSearch Service domain. The log driver options must be provided. 
-### > mazon S3 — Configure the task to send container logs to an Amazon S3 bucket. The default log driver options are provided but you must specify a valid Amazon S3 bucket name.
-## 12. Select the Use trace collection option to configure your tasks to route trace data from your application to AWS X-Ray. When this option is selected, Amazon ECS creates an AWS Distro for OpenTelemetry container sidecar which is preconfigured to send the trace data.(optional)
-## 13. Select the Use metric collection option to collect and send metrics for your tasks to either Amazon CloudWatch or Amazon Managed Service for Prometheus. When this option is selected, Amazon ECS creates an AWS Distro for OpenTelemetry container sidecar which is preconfigured to send the application metrics. (optional)
-### a) When Amazon CloudWatch is selected, your custom application metrics are routed to CloudWatch as custom metrics.
-### b) When Amazon Managed Service for Prometheus (Prometheus libraries instrumentation is selected, your task-level CPU, memory, network, and storage metrics and your custom application metrics are routed to Amazon Managed Service for Prometheus. For Workspace remote write endpoint, specify the remote write endpoint URL for your Prometheus workspace. For Scraping target, specify the host and port the AWS Distro for OpenTelemetry collector can use to scrape for metrics data.
-### c) When Amazon Managed Service for Prometheus (OpenTelemetry instrumentation is selected, your task-level CPU, memory, network, and storage metrics and your custom application metrics are routed to Amazon Managed Service for Prometheus. For Workspace remote write endpoint, specify the remote write endpoint URL for your Prometheus workspace.
+![image](https://user-images.githubusercontent.com/95855861/159852479-f36bd521-af91-429a-8068-7e32d151fbf5.png)
+
 ## 14. Expand the Tags section to add tags, as key-value pairs, to the task definition. (optional)
 ## 15.Choose Next to review the task definition. 
 ## 16. On the Review and create page, review each task definition section. Choose Edit to make changes. Once the task definition is complete, choose Create to register the task definition.
@@ -105,9 +107,29 @@ __________________________________________________
 
 # Creating a service using the Amazon ECS console
 
-## 1. Open the new console at https://console.aws.amazon.com/ecs/v2
-## 2. On the Clusters page, select the cluster to create the service in.
-## 3. From the Services tab, choose Deploy.
+## 1. Once you completed the Amazon ECS Task Definition, you are ready to create an Amazon ECS Service.
+
+## Select the ECS cluster that you created earlier, click the Services tab and then Create button.
+
+![image](https://user-images.githubusercontent.com/95855861/159852822-d6ef2671-9ea6-4aff-b69f-ae8f85a8bc1d.png)
+
+
+## 2. In the Create Service wizard, follow the below configuration (make sure you select FARGATE in the Launch type).
+
+## >Select the Task Definition that you created earlier
+## >Select the Platform version 1.4.0
+## >Select the ECS Cluster that you created earlier and enter the Service name (e.g. unicorns-svc)
+## >Set Number of tasks to 2
+## >Leave the default for the remaining and click Next step
+![image](https://user-images.githubusercontent.com/95855861/159852905-a3efa25c-fea7-48f5-be36-25375726979a.png)
+
+## 3. Configure Network
+## > In the network configuration, select the VPC that you created earlier and specify your subnets and ECS-Tasks-SG in the security group.
+
+![image](https://user-images.githubusercontent.com/95855861/159852946-4df4fd55-4a99-4c94-a5a7-8704f5649031.png)
+![Uploading image.png…]()
+
+## >Select Application Load Balancer in the load balancer type, and choose the load balancer that you created earlier.
 ## 4. The Compute configuration section can be expanded to change the compute option for your service to use. By default, the console will select a compute option for you so in most cases you can go to the next step. The following describes the order that the console uses to select a default:
 ### > If your cluster has a default capacity provider strategy defined, it will be selected.
 ### > If your cluster doesn't have a default capacity provider strategy defined but you do have the Fargate capacity providers added to the cluster, a custom capacity provider strategy using the FARGATE capacity provider will be selected.
