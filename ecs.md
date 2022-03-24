@@ -124,31 +124,25 @@ __________________________________________________
 
 ![image](https://user-images.githubusercontent.com/95855861/159852905-a3efa25c-fea7-48f5-be36-25375726979a.png)
 
-
 ## >Select Application Load Balancer in the load balancer type, and choose the load balancer that you created earlier.
-## 4. The Compute configuration section can be expanded to change the compute option for your service to use. By default, the console will select a compute option for you so in most cases you can go to the next step. The following describes the order that the console uses to select a default:
-### > If your cluster has a default capacity provider strategy defined, it will be selected.
-### > If your cluster doesn't have a default capacity provider strategy defined but you do have the Fargate capacity providers added to the cluster, a custom capacity provider strategy using the FARGATE capacity provider will be selected.
-### > If your cluster doesn't have a default capacity provider strategy defined but you do have one or more Auto Scaling group capacity providers added to the cluster, the Use custom (Advanced) option is selected and you will need to manually define the strategy.
-### > If your cluster doesn't have a default capacity provider strategy defined but you do have one or more Auto Scaling group capacity providers added to the cluster, the Use custom (Advanced) option is selected and you will need to manually define the strategy.
-## 5. For Application type, select Service.
-## 6. For Task definition, choose the task definition family and revision to use.
-## 7. For Service name, specify a name for your service
-## 8. For Desired tasks, specify the number of tasks to launch and maintain in the service.
-## 9. The Deployment options section can be expanded to change the minimum healthy percent and maximum percent of running tasks allowed during a service deployment. The console has default values for the most common use case selected.
-## 10. The Load balancing section can be expanded to configure a load balancer for your service. Use the following steps to configure your service to use an Application Load Balancer. (optional)
-### >For Load balancer type, select Application Load Balancer.
-### >Choose Create a new load balancer to create a new Application Load Balancer or Use an existing load balancer to select an existing Application Load Balancer.
-### >When creating a new load balancer, for Load balancer name, specify a unique name for your load balancer. When using an existing load balancer, for Load balancer, select your existing load balancer.
+![image](https://user-images.githubusercontent.com/95855861/159879097-cfe4ebc6-9683-42c5-9dd0-dae47e315130.png)
 
-### >For Listener, specify a port and protocol for the Application Load Balancer to listen for connection requests on. By default, the load balancer will be configured to use port 80 and HTTP.
-### >For Target group name, specify a name and a protocol for the target group that the Application Load Balancer will route requests to. By default, the target group will route requests to the first container defined in your task definition.
-### >For Health check path, specify a path that exists within your container where the Application Load Balancer should periodically send requests to verify the connection health between the Application Load Balancer and the container. By default, a path of / is used which is the root directory.
-### >For Health check grace period, specify the amount of time (in seconds) that the service scheduler should ignore unhealthy Elastic Load Balancing target health checks for.
-## 11. The Networking section can be expanded to define the network configuration for the service. Task definitions that use the awsvpc network mode or services configured to use a load balancer must have a networking configuration. By default, the console selects the default Amazon VPC along with all subnets and the default security group within the default Amazon VPC. Use the following steps to specify a custom configuration.
-### a) For VPC, select the VPC to use.
-### b) For Subnets, select one or more subnets in the VPC that the task scheduler should consider when placing your tasks.
-### c) For Security group, you can either select an existing security group or create a new one. To use an existing security group, select the security group and move to the next step. To create a new security group, choose Create a new security group. You must specify a security group name, description, and then add one or more inbound rules for the security group.
-### d) For Public IP, choose whether to auto-assign a public IP address to the elastic network interface (ENI) of the task. Tasks that are launched on AWS Fargate can be assigned a public IP address when run using a public subnet so they have a route to the internet. 
-## 12. The Tags section can be expanded to add tags, in the form of key-value pairs, to the service. (optional)
-__________________________________________________
+## >Click Add to load balance to add the container name:port 
+![image](https://user-images.githubusercontent.com/95855861/159879240-c19c052f-4f24-4554-8c58-67377dd7d243.png)
+
+## >In the Service discovery (optional) section, uncheck the “Enable service discovery integration” and press [Next step]
+![image](https://user-images.githubusercontent.com/95855861/159879394-3fa37d8e-61cd-4625-80a8-8660a35f817d.png)
+
+## 3 : SET AUTO SCALING 
+## >In Auto Scaling configuration, select Configure Service Auto Scaling and specify the minimum, desired, maximum number of tasks.
+![image](https://user-images.githubusercontent.com/95855861/159879784-63f7226f-f46e-418d-828f-cb1012a57b3d.png)
+
+![image](https://user-images.githubusercontent.com/95855861/159879820-ea5061e9-5e8f-4471-9d47-cf720cd608b1.png)
+
+## >In the Automatic task scaling policies, set the scaling policy type to Target Tracking, provide name of the scaling policy (e.g. Requests-policy), select the service metric (e.g. ALBRequestCountPerTarget) and then set the Target value (e.g. 300).
+
+## 4. REVIEW
+## > Finally, Review and click Create Service to create the Amazon ECS Service.
+
+## >Once the Service status is in Active state and all the tasks are in the Running state, browse to the target web site using the loadbalancer DNS.
+
