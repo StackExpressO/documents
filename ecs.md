@@ -97,9 +97,6 @@ _________________________________________________________________
 ## 11. Select the Use log collection option to specify a log configuration. For each available log driver, there are log driver options to specify. The default option sends container logs to CloudWatch Logs. The other log driver options are configured using AWS FireLens. 
 ## The following describes each container log destination in more detail.
 ### > Amazon CloudWatch — Configure the task to send container logs to CloudWatch Logs. The default log driver options are provided which creates a CloudWatch log group on your behalf. To specify a different log group name, change the driver option values.
-
-![image](https://user-images.githubusercontent.com/95855861/159852479-f36bd521-af91-429a-8068-7e32d151fbf5.png)
-
 ## 14. Expand the Tags section to add tags, as key-value pairs, to the task definition. (optional)
 ## 15.Choose Next to review the task definition. 
 ## 16. On the Review and create page, review each task definition section. Choose Edit to make changes. Once the task definition is complete, choose Create to register the task definition.
@@ -108,7 +105,7 @@ __________________________________________________
 # Creating a service using the Amazon ECS console
 
 ## 1. Once you completed the Amazon ECS Task Definition, you are ready to create an Amazon ECS Service.
-
+![image](https://user-images.githubusercontent.com/95855861/159852479-f36bd521-af91-429a-8068-7e32d151fbf5.png)
 ## Select the ECS cluster that you created earlier, click the Services tab and then Create button.
 
 ![image](https://user-images.githubusercontent.com/95855861/159852822-d6ef2671-9ea6-4aff-b69f-ae8f85a8bc1d.png)
@@ -121,13 +118,12 @@ __________________________________________________
 ## >Select the ECS Cluster that you created earlier and enter the Service name (e.g. unicorns-svc)
 ## >Set Number of tasks to 2
 ## >Leave the default for the remaining and click Next step
-![image](https://user-images.githubusercontent.com/95855861/159852905-a3efa25c-fea7-48f5-be36-25375726979a.png)
 
 ## 3. Configure Network
 ## > In the network configuration, select the VPC that you created earlier and specify your subnets and ECS-Tasks-SG in the security group.
 
-![image](https://user-images.githubusercontent.com/95855861/159852946-4df4fd55-4a99-4c94-a5a7-8704f5649031.png)
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/95855861/159852905-a3efa25c-fea7-48f5-be36-25375726979a.png)
+
 
 ## >Select Application Load Balancer in the load balancer type, and choose the load balancer that you created earlier.
 ## 4. The Compute configuration section can be expanded to change the compute option for your service to use. By default, the console will select a compute option for you so in most cases you can go to the next step. The following describes the order that the console uses to select a default:
