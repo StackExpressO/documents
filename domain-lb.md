@@ -1,4 +1,4 @@
-#  Create a Classic Load Balancer
+#  Create a Classic Load Balancer in AWS Console.
 
 ##  Select a load balancer type
 ### Elastic Load Balancing supports different types of load balancers. For this tutorial, you create a Classic Load Balancer.
