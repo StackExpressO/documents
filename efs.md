@@ -35,7 +35,6 @@
 
 10. Assign mount target here
 
-![Uploading Aspose.Words.7177b00d-6b0c-4b77-8472-fd4fbb456c01.009.jpeg…]()
 
 11. Created file system with Name Demo or any name of your choice.
 
