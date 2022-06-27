@@ -2,7 +2,7 @@
 
 **Add ssh key with Gitlab CI/CD** 
 
-Step 1: Login to Ec2 Instance
+Step 1: Login to Ec2 Instanc
 
 Step 2: Create Directory and Go to Directory
 ```bash
