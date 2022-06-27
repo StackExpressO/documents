@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-**Add ssh key with Gitlab CI/CD**
-=======
-                                                 **Add ssh key with Gitlab CI/CD**
->>>>>>> 171d1aa08ef5b6166af4710775988b19a4b4cd66
-                                                 
+
+**Add ssh key with Gitlab CI/CD**             
 
 Step 1: Login to Ec2 Instance
 
