@@ -29,8 +29,10 @@ pm2 logs
 
 1. After Completion of above steps it will automatically create index pattern in elastic search
 
-![](Aspose.Words.67561974-5a2e-4a1b-8df4-252052c735cd.001.png)
+![Aspose Words 67561974-5a2e-4a1b-8df4-252052c735cd 001](https://user-images.githubusercontent.com/95607370/175908637-8d4ec8f7-0690-4c67-b3a7-ec253f4e8864.png)
+
 
 2. Now click on the discover tab on elastic search and select the index pattern to see the logs, then it will show the logs.
 
-![](Aspose.Words.67561974-5a2e-4a1b-8df4-252052c735cd.002.png)
+![Aspose Words 67561974-5a2e-4a1b-8df4-252052c735cd 002](https://user-images.githubusercontent.com/95607370/175908710-a53d62e1-6686-4475-ac99-76df82272ff2.png)
+
