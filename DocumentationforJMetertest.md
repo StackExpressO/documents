@@ -50,13 +50,15 @@ this command will create a folder with the name of report in the destination fol
 
 4. In that report folder we have the folders and files
 
-    ![](Aspose.Words.e8408beb-1c36-4897-ab66-dfeb907ca75a.001.png)
+    ![Aspose Words e8408beb-1c36-4897-ab66-dfeb907ca75a 001](https://user-images.githubusercontent.com/95607370/181221600-dfe6baa4-c7a5-455a-9615-f3ade073e542.png)
+
 
 5. Copy the report folder from remote to local machine by using filezilla
 
 6. After copied the folder open that report folder in local
 
-    ![](Aspose.Words.e8408beb-1c36-4897-ab66-dfeb907ca75a.002.png)
+    ![Aspose Words e8408beb-1c36-4897-ab66-dfeb907ca75a 002](https://user-images.githubusercontent.com/95607370/181221672-74ac5e7f-bd6f-4672-b035-2cfde61d6e44.png)
+
 
 7. Double click on the index.html file it will automatically redirect to the browser and open the report like GUI.
 
