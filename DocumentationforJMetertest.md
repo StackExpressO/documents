@@ -1,4 +1,4 @@
-﻿``**Documentation for JMeter test**
+﻿**Documentation for JMeter test**
 
 Installation of JMeter on Ubuntu server:
 
