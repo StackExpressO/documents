@@ -31,18 +31,18 @@ Ex:
 
    `sh jmeter.sh -n -t /home/ubuntu/file.jmx -l /home/ubuntu/test.csv`
 
-Note : it takes approximately 20 mins to create the output file
+    Note : it takes approximately 20 mins to create the output file
 
 2. The above command will create the output file in the destination folder
   
-3.  Create the report from the output file by using below command 
+3. Create the report from the output file by using below command 
 
      `sh jmeter.sh -g /destination of output.csv file -o /destination of the report`
 Ex: 
 
     `sh jmeter.sh -g /home/ubuntu/test.csv -o /home/ubuntu/report`
 
-this command will create a folder with the name of report in the destination folder
+     this command will create a folder with the name of report in the destination folder
 
 4. In that report folder we have the folders and files
 
