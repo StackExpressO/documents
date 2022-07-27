@@ -15,7 +15,7 @@ Installation of JMeter on Ubuntu server:
 
 3. Unzip JMeter zip file
 ```bash
-   unzip apache-jmeter-5.5.zip`
+   `unzip apache-jmeter-5.5.zip`
 ```
 
 4. Create  **apache-jmeter-5.5** directory
