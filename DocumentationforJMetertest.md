@@ -4,9 +4,9 @@ Installation of JMeter on Ubuntu server:
 
 
 1. Install java in the ec2 instance
-```bash
-   sudo apt install openjdk-11-jre-headless
-```
+
+   `sudo apt install openjdk-11-jre-headless`
+
 
 2. Install Apache JMeter by using the following command
 ```bash
