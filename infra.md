@@ -8,7 +8,7 @@
 
 4. Then set up the AWS credentials and region and provider in Provider.tf. This will help in set up of AWS.
 
-Once this is complete , run the command "terraform init" and this will initalize the backend and sync the AWS with the terraform cloud.
+5. Once this is complete , run the command "terraform init" and this will initalize the backend and sync the AWS with the terraform cloud.
 
 ##Main.tf
 
