@@ -4,11 +4,11 @@
 ## Install nginx 
 >## sudo apt-get install nginx
 
-## Once you have nginx installed you would have a directory structure like this under 
+## Once you have nginx installed it will creates nginx folder in /etc
 
 >## cd /etc/nginx/
 
-## The main configuration file is nginx.conf file and it is recommended to take a backup for it.
+## There is a main configuration file that is nginx.conf file and it is recommended to take a backup for it.
 
 ---------------------------------------------
 ## we will be creating a file in sites-available directoy and then create a symbolic link for that in sites enabled directory.
