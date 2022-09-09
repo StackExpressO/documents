@@ -1,13 +1,14 @@
 #Mandatory Steps to initialize terraform cloud and AWS with each other
-##1. First go to https://app.terraform.io
 
-##2. There you need to create a workspace and an orgsnization.
+1. First go to https://app.terraform.io
 
-##3. Once created you need to mention the same workspace and organisation in backend.tf.
+2. There you need to create a workspace and an orgsnization.
 
-##4. Then set up the AWS credentials and region and provider in Provider.tf. This will help in set up of AWS.
+3. Once created you need to mention the same workspace and organisation in backend.tf.
 
-##5. Once this is complete , run the command "terraform init" and this will initalize the backend and sync the AWS with the terraform cloud.
+4. Then set up the AWS credentials and region and provider in Provider.tf. This will help in set up of AWS.
+
+5. Once this is complete , run the command "terraform init" and this will initalize the backend and sync the AWS with the terraform cloud.
 
 
 
