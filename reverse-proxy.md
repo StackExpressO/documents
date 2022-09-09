@@ -5,7 +5,6 @@
 >## sudo apt-get install nginx
 
 ## Once you have nginx installed you would have a directory structure like this under 
-![image](https://user-images.githubusercontent.com/95855861/159456435-9ee05ca6-e72a-403a-89e2-9c1d53a52e46.png)
 
 >## cd /etc/nginx/
 
