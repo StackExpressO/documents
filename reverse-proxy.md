@@ -1,12 +1,12 @@
-Configuring Nginx as a reverse proxy for Web application.
+**Configuring Nginx as a reverse proxy for Web application.**
 
 
- Install nginx 
->## sudo apt-get install nginx
+ **Install nginx**
+> sudo apt-get install nginx
 
-## Once you have nginx installed it will creates nginx folder in /etc
+ **Once you have nginx installed it will creates nginx folder in /etc**
 
->## cd /etc/nginx/
+> cd /etc/nginx/
 
 ## There is a main configuration file that is nginx.conf file and it is recommended to take a backup for it.
 
