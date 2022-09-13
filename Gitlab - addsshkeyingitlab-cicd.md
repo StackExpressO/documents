@@ -3,7 +3,14 @@
 
 Step 1: Login to Ec2 Instance
 
-Step 2: Create Directory and Go to Directory
+Step 2: Create ssh key-pair
+ssh-keygen  
+
+Step 3: When created, the key-pair can be found in your home directory's .ssh folder
+
+<img width="578" alt="MicrosoftTeams-image (5)" src="https://user-images.githubusercontent.com/95607370/189799762-737f9bb8-3758-4a0e-9741-117ba7967ab6.png">
+
+Step 4: Create Directory and Go to Directory
 ```bash
 mkdir backend 
 ```
@@ -11,12 +18,12 @@ mkdir backend
 cd backend
 ```
 
-Step 3: Clone code from Gitlab Repository
+Step 5: Clone code from Gitlab Repository
 
 ```bash
 git clone https://gitlab.com/stackexpress3/testing.git
 ```
-Step 4:  Add “ Remote Origin URL” in Code
+Step 6:  Add “ Remote Origin URL” in Code
 
 go to code
 ```bash
@@ -37,7 +44,7 @@ Add the URL in config file
 ![Aspose Words 99266f9d-b975-4fef-ad30-12ccbf44a7b2 002](https://user-images.githubusercontent.com/95607370/175900577-552e3d3c-36c9-4945-a9fd-49d140981cb5.png)
 
 
-Step 5:  Add “public key” in Gitlab
+Step 7:  Add “public key” in Gitlab
 
 Go to “user setting”
 
@@ -53,7 +60,7 @@ Add “ssh key”
 ![Aspose Words 99266f9d-b975-4fef-ad30-12ccbf44a7b2 004](https://user-images.githubusercontent.com/95607370/175900687-0ff1fe76-6941-4d47-a55b-e04445f52a37.png)
 
 
-Step 6: Modify “authorized\\_keys” with “public key in Ec2 Instance”
+Step 8: Modify “authorized\\_keys” with “public key in Ec2 Instance”
 
 Go to “.ssh” directory
 ```bash
@@ -62,7 +69,7 @@ cd /home/ubuntu/.ssh
 
 Copy public key from “id\\_rsa.pub” to “authorized\\_keys” file
 
-Step 7: Add “private key” in Variables in Gitlab
+Step 9: Add “private key” in Variables in Gitlab
 
 Go to “repo setting
 
@@ -78,7 +85,7 @@ Add “SSH\\_PRIVATE\\_KEY” in variables
 ![Aspose Words 99266f9d-b975-4fef-ad30-12ccbf44a7b2 006](https://user-images.githubusercontent.com/95607370/175900812-899232dd-d112-4379-b21d-8f30579366c7.png)
 
 
-Step 8: Call “private key” in Gitlab CI / CD in Gitlab
+Step 10: Call “private key” in Gitlab CI / CD in Gitlab
 
 edit “.gitlab-ci.yml” file
 
@@ -87,7 +94,7 @@ Call “SSH\\_PRIVATE\\_KEY”
 ![Aspose Words 99266f9d-b975-4fef-ad30-12ccbf44a7b2 007](https://user-images.githubusercontent.com/95607370/175900875-2de35c0e-e7d6-4c85-94d5-1279a4b7fd5d.png)
 
 
-Step 9: Run and Check Pipeline in Gitlab
+Step 11: Run and Check Pipeline in Gitlab
 
 ![Aspose Words 99266f9d-b975-4fef-ad30-12ccbf44a7b2 008](https://user-images.githubusercontent.com/95607370/175900967-ad954eb8-1766-420f-8bda-a6b67f54d87b.png)
 
