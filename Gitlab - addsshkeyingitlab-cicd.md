@@ -7,7 +7,8 @@ Step 2: Create ssh key-pair
 ssh-keygen  
 
 Step 3: When created, the key-pair can be found in your home directory's .ssh folder
-![Uploading MicrosoftTeams-image (5).png…]()
+
+<img width="578" alt="MicrosoftTeams-image (5)" src="https://user-images.githubusercontent.com/95607370/189799762-737f9bb8-3758-4a0e-9741-117ba7967ab6.png">
 
 Step 4: Create Directory and Go to Directory
 ```bash
